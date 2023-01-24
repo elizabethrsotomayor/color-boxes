@@ -50,7 +50,7 @@ class ColorBox extends Component {
     return (
       <div
         className="ColorBox"
-        style={{ backgroundColor: this.state.color }}
+        style={{ backgroundColor: this.randomColor() }}
         onClick={this.changeColor}
       ></div>
     );
