@@ -33,19 +33,17 @@ class ColorBoxes extends Component {
 
   randomColor() {
     let colorIdx = Math.floor(Math.random() * this.props.colors.length) + 1;
-    // console.log(this.props.colors[colorIdx]);
-
     return this.props.colors[colorIdx];
   }
 
   render() {
-    return (
-      <div className="ColorBoxes">
-        {Array(this.props.numBoxes).fill(
-          <ColorBox color={this.randomColor()} />
-        )}
-      </div>
-    );
+    let boxes = [];
+
+    for (let i = 0; i < this.props.numBoxes; i++) {
+      boxes.push(<ColorBox color={this.randomColor()} />);
+    }
+
+    return <div className="ColorBoxes">{boxes}</div>;
   }
 }
 
