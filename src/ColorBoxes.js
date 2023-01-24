@@ -40,7 +40,7 @@ class ColorBoxes extends Component {
     let boxes = [];
 
     for (let i = 0; i < this.props.numBoxes; i++) {
-      boxes.push(<ColorBox color={this.randomColor()} />);
+      boxes.push(<ColorBox key={i} color={this.randomColor()} />);
     }
 
     return <div className="ColorBoxes">{boxes}</div>;
